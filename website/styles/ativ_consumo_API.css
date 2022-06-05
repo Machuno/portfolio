@@ -1,0 +1,127 @@
+/* Seletores de elementos */
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 10px 10px;
+  color: black;
+  text-align: center;
+  z-index: 100;
+  font-size: 30px; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+input[type= "text"] {
+  width: 300px;
+}
+
+input[type= "button"] {
+  margin-top: 5px;
+}
+
+footer {
+  margin: 0;
+  padding: 12px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+  padding: 20px;
+}
+
+/* Seletores de ID */
+
+#main {
+  position: relative;
+  margin: 150px 10% 10px 10%;
+}
+
+#meuIp {
+  padding-left: 5px;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+/* Seletores de classe */
+
+.border{
+  width: 80%;
+  border: 3px solid gray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 30px 10% 30px 10%;
+}
+
+.text{
+  padding: 15px;
+  font-size: 1.5em
+}
+
+.grid-container {
+  display: grid;
+  width: 70%;
+  grid-template-columns: 200px auto;
+  gap: 1px;
+  padding: 1px;
+}
+
+.grid-container > div {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1 em;
+}
+
+
+/******** Media Queries ********/
+
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  .grid-container {
+    width: 100%;
+  }
+
+  .border{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 749px) {
+
+  input[type= "text"] {
+    width: 70vw;
+  }
+  .border{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .grid-container {
+    width: 100%;
+    grid-template-columns: auto;
+  }
+}
