@@ -21,7 +21,7 @@ if(!lsContent) {
   let lgpdButton = lgpdArea.querySelector('button');
 
   lgpdButton.addEventListener('click', async () => {
-    
+    lgpdArea.remove();
 
     let result = await fetch(lgpdUrl);
     let json = await result.json();
@@ -31,7 +31,7 @@ if(!lsContent) {
       localStorage.setItem('lgpd',id); // trocar id por json.id
       lgpdArea.remove();
     }
-
+    
 
   });
 }
