@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/atividades.css" rel="stylesheet">
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/layout.css" rel="stylesheet">
+    <!-- Incluir BootStrap-Icons -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Incluir BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous">
-    <title>Atividades LM</title>
+    <!-- Incluir JQuery -->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- Script incluir componentes na página -->
+    <script>
+      $(function () {
+        $(".MainHeader").load("../pages/MainHeader/MainHeader.html");
+        $(".Sidebar").load("../pages/Sidebar/Sidebar.html");
+        $(".MainFooter").load("../pages/MainFooter/MainFooter.html");
+        $(".Navbar").load("../pages/Navbar/Navbar.html");
+      });
+    </script>
+    <title>Atividades LGBM</title>
   </head>
-
-  <body>
-    <header id="header">
-      <div>Atividades profissionais</div>
-    </header>
-
-    <div id="main">
-
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
   
+  <body>
+    <div id="Layout">
+      <!-- Cabeçalho -->
+      <div class="MainHeader"></div>
+      <!-- Sidebar -->
+      <div class="Sidebar"></div>
+      <!-- Navbar - só apararece em mobile -->
+      <div class="Navbar"></div>
+      <!-- Corpo -->
+      <div class="Content">
+        <p class="text-center">Estas são algumas atividades que desenvolvi ou estou desenvolvendo para
+          aprimorar os conhecimentos na áreas de formação.
+        </p>
+          
+        <!-- Cartão de atividades -->
+        <div class="card mb-1" style="width: 250px; margin: 1rem ;">
+          <div class="card-body">
+            <h5 class="card-title">Consumo de API</h5>
+            <p class="card-text">Nesta atividade foi realidado o consumo de duas API's públicas.
+              Sendo uma para obter o seu IP público e outra API para obter dados a partir de um
+              IP público.
+            </p>
+            <a href="./ativ_dev/ativ_consumo_API.html" class="btn btn-primary">Ir para atividade</a>
+            <div class="card-footer mt-2 bg-white text-muted">
+              #dev #web #api
+            </div>
+          </div>
+        </div>
 
+
+
+      </div>
+
+      <!-- Roda pé -->
+      <div class="MainFooter"></div>
+
+      <!-- Barra de aceitar cookies -->
+      <script src="../utils/lgpd.js"></script>
 
     </div>
-
- 
-
-
-
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0 text-muted">© 2022 Machuno.info</span>
-      </div>
-      <span>Desenvolvido por Luis Gustavo Baptista Machuno</span>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">Contatos:</li>
-        <li class="ms-3"><a class="bi-envelope-fill" href="mailto:machuno@gmail.com"></a></li>
-        <li class="ms-3"><a class="bi-github" href="https://github.com/Machuno"></a></li>
-        <li class="ms-3"><a class="bi-linkedin" href="https://www.linkedin.com/in/luisgbmachuno/"></a></li>
-      </ul>
-    </footer>
-
-    </script>
-    <!-- Importar Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
   </body>
-
 </html>

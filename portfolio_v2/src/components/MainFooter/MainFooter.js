@@ -1,15 +1,15 @@
 import React from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import "./Footer.css"
+import "./MainFooter.css"
 
 const Footer = () => {
   return <div className="Footer" >
-    <span>© 2022 Machuno.info</span>
-    <span>Desenvolvido por Luis Gustavo Baptista Machuno</span>
-    <span>
+    <span className="Footer-Left">© 2022 Machuno.info</span>
+    <span className="Footer-Center">Desenvolvido por Luis Gustavo Baptista Machuno</span>
+    <span className="Footer-Right">
       <ul>
-        <li>Contatos:</li>
+        <li><p>Contatos:</p></li>
         <li><a class="bi-envelope-fill" href="mailto:machuno@gmail.com"></a></li>
         <li><a class="bi-github" href="https://github.com/Machuno" target="_blank"
           rel="noopener noreferrer"></a></li>
@@ -18,6 +18,7 @@ const Footer = () => {
       </ul>
     </span>
   </div> 
+
 };
 
 export default Footer;

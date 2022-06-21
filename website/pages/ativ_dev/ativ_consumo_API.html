@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../styles/ativ_consumo_API.css" rel="stylesheet">
+    <link href="../../styles/layout.css" rel="stylesheet">
+    <!-- Incluir BootStrap-Icons -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Incluir BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous">
 
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
-    
+    <!-- Incluir JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="./index.js"></script>
-
+    <!-- Script JQuery teste de IP -->
     <script type="application/javascript">
       
       $(function() {
@@ -28,7 +32,7 @@
         );
       });
     </script>
-
+    <!-- Script tratamento de entrada de texto -->
     <script>
       async function getIpInfo() {
         console.log("Iniciou função getIpInfo()")
@@ -96,128 +100,121 @@
         }
       }
     </script>
-
+    <!-- Script incluir componenetes na página -->
+    <script>
+      $(function () {
+        $(".MainHeader").load("../../pages/MainHeader/MainHeader.html");
+        $(".Sidebar").load("../../pages/Sidebar/Sidebar.html");
+        $(".MainFooter").load("../../pages/MainFooter/MainFooter.html");
+        $(".Navbar").load("../../pages/Navbar/Navbar.html");
+      });
+    </script>
     <title>Programação</title>
-    
+
   </head>
 
   <body>
-    <header id="header">
-      <div>Consumo de APIs públicas</div>
-    </header>
+    <div id="Layout">
+      <!-- Cabeçalho -->
+      <div class="MainHeader"></div>
+      <!-- Sidebar -->
+      <div class="Sidebar"></div>
+      <!-- Navbar - só apararece em mobile -->
+      <div class="Navbar"></div>
+      <!-- Corpo -->
+      <div class="Content">
 
-    <div id="main">
-      <p>Nesta atividade foi utilizada uma API pública disponível em <a href="https://www.ipify.org/">
-        https://www.ipify.org/</a>. Inicialmente seria utilizado JavaScript para utilizar a API, mas
-        após a leitura da documentação e alguns teste foi decidido por utilizar JQuery para acessar
-        a API.
-      </p>
-      <div class="border">
-        <div id="meuIp">Não foi possível obter seu IP. Recarregue a página.</div>
-      </div>
-      Nesta atividade foram utilizados:
-      <ul>
-        <li>HTML 5</li>
-        <li>CSS 3</li>
-        <li>JQuery</li>
-        <li>API IPify</li>
-      </ul>
-      
-      <hr>
-      
-      <p>Analisando as API públicas encontradas para treinar programação, também foi encontrada uma
-        API que busca informações sobre o IP informado, disponível em <a href="https://ipinfo.io">
-        https://ipinfo.io/</a>.
-      </p>
+        <div class="titulo">Consumo de APIs públicas</div>
+        
+        <p>Nesta atividade foi utilizada uma API pública disponível em <a href="https://www.ipify.org/">
+          https://www.ipify.org/</a>. Inicialmente seria utilizado JavaScript para utilizar a API, mas
+          após a leitura da documentação e alguns teste foi decidido por utilizar JQuery para acessar
+          a API.
+        </p>
 
-      <div class="border">
-        <form>
-          <label for="pesqIp">Digite o IP que deseja pesuisar (IPv4):</label><br>
-          <input type="text" id="pesqIp" name="pesqIp">
-          <input type="button" value="Pesquisar" onclick="getIpInfo(pesqIp.value)">
-        </form>
-        <p>Você pode usar o seu ip detectado no item acima para confirmar os dados retornados.</p>
+        <div class="border">
+          <div id="meuIp">Não foi possível obter seu IP. Recarregue a página.</div>
+        </div>
+
+        <p>Nesta atividade foram utilizados:</p>
+        <ul>
+          <li>HTML 5</li>
+          <li>CSS 3</li>
+          <li>JQuery</li>
+          <li>API IPify</li>
+        </ul>
+        
         <hr>
         
-        <form>
-          <p>Resultados:</p>
-          <div class="grid-container">
-            <div><label for="ipPesquisado">IP Pesquisado:</label></div>
-            <div><input type="text" id="ipPesquisado" name="ipPesquisado" disabled></div>
-            <div><label for="ipCity">Cidade:</label></div>
-            <div><input type="text" id="ipCity" name="ipCity" disabled></div>
-            <div><label for="ipRegion">Região:</label></div>
-            <div><input type="text" id="ipRegion" name="ipRegion" disabled></div>
-            <div><label for="ipCountry">País:</label></div>
-            <div><input type="text" id="ipCountry" name="ipCountry" disabled></div>
-            <div><label for="ipLocation">Localicação:</label></div>
-            <div><input type="text" id="ipLocation" name="ipLocation" disabled></div>
-            <div><label for="ipOrg">Operadora:</label></div>
-            <div><input type="text" id="ipOrg" name="ipOrg" disabled></div>
-            <div><label for="ipTimezone">Fuso horário:</label></div>
-            <div><input type="text" id="ipTimezone" name="ipTimezone" disabled></div>
-          </div>
-          <!--
-          <h5>Localização aproximada</h5>
+        <p>Analisando as API públicas encontradas para treinar programação, também foi encontrada uma
+          API que busca informações sobre o IP informado, disponível em <a href="https://ipinfo.io">
+          https://ipinfo.io/</a>.
+        </p>
+
+        <div class="border">
+          <form>
+            <label for="pesqIp">Digite o IP que deseja pesuisar (IPv4):</label><br>
+            <input type="text" id="pesqIp" name="pesqIp">
+            <input type="button" value="Pesquisar" onclick="getIpInfo(pesqIp.value)">
+          </form>
+          <p>Você pode usar o seu ip detectado no item acima para confirmar os dados retornados.</p>
+          <hr>
           
-          <div id="map"></div>
-          -->
-          
-          
-          
-        </form>
+          <form>
+            <p>Resultados:</p>
+            <div class="grid-container">
+              <div><label for="ipPesquisado">IP Pesquisado:</label></div>
+              <div><input type="text" id="ipPesquisado" name="ipPesquisado" disabled></div>
+              <div><label for="ipCity">Cidade:</label></div>
+              <div><input type="text" id="ipCity" name="ipCity" disabled></div>
+              <div><label for="ipRegion">Região:</label></div>
+              <div><input type="text" id="ipRegion" name="ipRegion" disabled></div>
+              <div><label for="ipCountry">País:</label></div>
+              <div><input type="text" id="ipCountry" name="ipCountry" disabled></div>
+              <div><label for="ipLocation">Localicação:</label></div>
+              <div><input type="text" id="ipLocation" name="ipLocation" disabled></div>
+              <div><label for="ipOrg">Operadora:</label></div>
+              <div><input type="text" id="ipOrg" name="ipOrg" disabled></div>
+              <div><label for="ipTimezone">Fuso horário:</label></div>
+              <div><input type="text" id="ipTimezone" name="ipTimezone" disabled></div>
+            </div>
+            <!--
+            <h5>Localização aproximada</h5>
+            
+            <div id="map"></div>
+            -->
+          </form>
+        </div>
+        <p>Nesta atividade foram utilizados:</p>
+        <ul>
+          <li>HTML 5</li>
+          <ul>
+            <li>form (formulário)</li>
+          </ul>
+          <li>CSS 3</li>
+          <ul>
+            <li>grid (display em formato de tabela)</li>
+          </ul>
+          <li>JavaScript</li>
+          <ul>
+            <li>Template Literal para interpolar string</li>
+          </ul>
+          <li>API IPinfo</li>
+        </ul>
       </div>
-      Nesta atividade foram utilizados:
-      <ul>
-        <li>HTML 5</li>
-        <ul>
-          <li>form (formulário)</li>
-        </ul>
-        <li>CSS 3</li>
-        <ul>
-          <li>grid (display em formato de tabela)</li>
-        </ul>
-        <li>JavaScript</li>
-        <ul>
-          <li>Template Literal para interpolar string</li>
-        </ul>
-        <li>API IPinfo</li>
-      </ul>
 
+      <!-- Roda pé -->
+      <div class="MainFooter"></div>
 
+      <!-- Barra de aceitar cookies -->
+      <script src="../utils/lgpd.js"></script>
 
+      <!-- Script: Incluir GoogleMaps -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIFaSy@4EG1hcgAaHtIkleePmDCVtW1MU6azEaY&callback=initMap&v=weekly"
+        defer>
+      </script>
 
-
-
- 
     </div>
-
-
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0 text-muted">© 2022 Machuno.info</span>
-      </div>
-      <span>Desenvolvido por Luis Gustavo Baptista Machuno</span>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">Contatos:</li>
-        <li class="ms-3"><a class="bi-envelope-fill" href="mailto:machuno@gmail.com"></a></li>
-        <li class="ms-3"><a class="bi-github" href="https://github.com/Machuno"></a></li>
-        <li class="ms-3"><a class="bi-linkedin" href="https://www.linkedin.com/in/luisgbmachuno/"></a></li>
-      </ul>
-    </footer>
-
-    </script>
-    <!-- Importar Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIFaSy@4EG1hcgAaHtIkleePmDCVtW1MU6azEaY&callback=initMap&v=weekly"
-      defer
-    ></script>
-    
-    
-    
   </body>
-
 </html>

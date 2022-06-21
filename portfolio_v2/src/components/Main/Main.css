@@ -1,0 +1,8 @@
+.Main {
+  grid-area: CT;
+  background-color: blue;
+  position: relative;
+  right: 0px;
+  margin: 0;
+
+}

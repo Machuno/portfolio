@@ -1,9 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import Layout from './components/Layout/Layout';
 
 const App = () => {
-  const message = "Hello World!"
+  return (
+    <div className="App">
+      
+      <Layout />
 
-  return <h1>{message}</h1>
+    </div>
+  )
 }
 
 export default App;

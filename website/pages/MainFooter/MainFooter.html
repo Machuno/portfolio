@@ -1,0 +1,66 @@
+<style>
+  .MainFooter {
+    grid-area: MF;
+  }
+  
+  .Footer {
+    background-color: #3066be;
+    color: #f1f1f1;
+    font-size: 1em;
+    height: 100%;
+
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 20px;
+  }
+
+  .Footer ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  .Footer-Left {
+    padding-left: 40px;
+    align-items: center;
+  }
+
+  .Footer-Right {
+    padding-right: 40px;
+  }
+
+@media (max-width: 930px) {
+  .Footer{
+    flex-direction: column;
+    align-items:center;
+    font-size: 0.8em;
+  }
+}
+
+</style>
+
+<div class="Footer" >
+  <span class="Footer-Left">©2022 Machuno.info</span>
+  <span class="Footer-Center">Desenvolvido por Luis Gustavo Baptista Machuno</span>
+  <span class="Footer-Right">
+    <ul>
+      <li>Contatos:</li>
+      <li><a class="bi-envelope-fill" href="mailto:machuno@gmail.com"></a></li>
+      <li><a class="bi-github" href="https://github.com/Machuno" target="_blank"
+        rel="noopener noreferrer"></a></li>
+      <li><a class="bi-linkedin" href="https://www.linkedin.com/in/luisgbmachuno/"
+        target="_blank" rel="noopener noreferrer"></a></li>
+    </ul>
+  </span>
+</div>

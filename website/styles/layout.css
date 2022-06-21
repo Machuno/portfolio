@@ -1,0 +1,94 @@
+/*reseta todos elementos do CSS*/
+* {
+  margin: 0;
+}
+
+#Layout {
+  display: grid;
+  /*
+  Layout
+  MH = MainHeader
+  AS = Aside
+  CT = Content
+  MF = MainFooter
+  */
+  grid-template-columns: 200px auto;
+  grid-template-rows: 100px auto 75px;
+
+  grid-template-areas: 
+  'MH MH'
+  'AS CT'
+  'MF MF';
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.Sidebar {
+  grid-area: AS;
+  overflow: auto;
+}
+
+.Navbar {
+  grid-area: Navbar;
+  text-align: center;
+  display: none;
+}
+
+.Navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.Content {
+  grid-area: CT;
+  overflow-x: auto;
+  background-color: #EDFCFD;
+  padding: 0.5em;
+}
+
+.Content p {
+  padding: 0em;
+}
+
+small {
+  padding: 0.4em;
+}
+
+.titulo {
+  background-color: lightgray;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+  #Layout {
+    display: grid;
+    grid-template-columns: 120px auto;
+  }
+}
+
+@media (max-width: 749px) {
+
+  #Layout {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 50px auto 75px;
+    grid-template-areas: 
+    'MH'
+    'Navbar'
+    'CT'
+    'MF';
+  }
+
+  .Sidebar {
+    display: none;
+  }
+
+  .Navbar {
+    display: inline;
+  }
+
+}

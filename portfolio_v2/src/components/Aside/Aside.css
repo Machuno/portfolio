@@ -1,0 +1,42 @@
+.Aside {
+  grid-area: AS;
+  background-color: #f1f1f1;
+  color: #444444;
+  font-size: 1em;
+  border: 2px solid #1A1A1A;
+  
+  margin: 0;
+
+  height: 100%;
+  padding: 12px 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  
+  
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: top;
+  padding-top: 6em;
+}
+
+.Aside a {
+  color: #1A1A1A;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.Aside ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.Aside-Left {
+  padding-left: 20px;
+}
+
+.Aside-Right {
+  padding-right: 20px;
+}
