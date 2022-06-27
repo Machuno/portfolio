@@ -9,12 +9,12 @@
   text-decoration: none;
   list-style: none;
   text-align: center;
-  margin: 10px;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 .Sidebar li {
-  padding: 10px 10px;
+  padding: 10px;
   border: solid 2px #eddea4;
   border-radius: 5px;
   margin: 10px;
@@ -32,7 +32,11 @@
 }
 
 @media (min-width: 750px) and (max-width: 1200px) {
-  .Sidebar li p {
+  .Sidebar {
+    padding: 6px;
+  }
+
+  .Sidebar li .bi {
     display: none;
   }
 
@@ -41,8 +45,8 @@
   }
 
   .Sidebar li {
-    padding: 10px 10px;
-    margin: 10px;
+    padding: 0px;
+    margin: 4px;
   }
 
 }
@@ -50,7 +54,7 @@
 </style>
 
 <div>
-  <p>Menu de navegação</p>
+  <p class="text-center">Menu de navegação</p>
   <ul>
     <li><a href="https://machuno.info"><i class="bi bi-house-fill"></i><br><p>Home</p></a></li>
     <li><a href="https://machuno.info/pages/formacao"><i class="bi bi-mortarboard-fill"></i><br><p>Formação</p></a></li>
