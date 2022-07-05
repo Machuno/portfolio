@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../styles/ativ_portfolioV1.0.css" rel="stylesheet">
+    <link href="../../../styles/layout.css" rel="stylesheet">
+    <!-- Incluir BootStrap-Icons -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- Incluir BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+    <!-- Incluir JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    
+    <!-- Script incluir componenetes na página -->
+    <script>
+      $(function () {
+        $(".MainHeader").load("../../MainHeader/MainHeader.html");
+        $(".Sidebar").load("../../Sidebar/Sidebar.html");
+        $(".MainFooter").load("../../MainFooter/MainFooter.html");
+        $(".Navbar").load("../../Navbar/Navbar.html");
+      });
+    </script>
+    <title>Atividade</title>
+
+  </head>
+
+  <body>
+    <div id="Layout">
+      <!-- Cabeçalho -->
+      <div class="MainHeader"></div>
+      <!-- Sidebar -->
+      <div class="Sidebar"></div>
+      <!-- Navbar - só apararece em mobile -->
+      <div class="Navbar"></div>
+      <!-- Corpo -->
+      <div class="Content">
+
+        <div class="titulo">Este Portfólio (V1.0)</div>
+        
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          Este portfolio foi uma forma encontrada de realizar uma apresentação de minha vida
+          profissional e manter registrado minhas atividades, tanto de carreira acadêmica
+          como profissional.
+        </p>
+
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          Na criação deste site foram encontrados diversos desafios. A escolha das linguagens,
+          frameworks e bibliotecas foi complicada pois alguns componentes não funcionavam devido
+          à compatibilidade. Logo, para a primeira versão, foi decidido utilizar as linguagens
+          mais simples possíveis para "tirar o projeto do papel".
+        </p>
+
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          As ferramentas utilizadas para a programação deste site foram:
+        </p>
+        
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2">
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header fw-bold">
+                Ambiente de desenvolvimento
+              </div>
+              <div class="card-body">
+                <img src="../../../images/logo_vscode.svg" alt="Logo VScode"
+                  style="max-width:50px;max-height:50px;" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="Visual Studio Code">
+              </div>
+              <div class="card-footer">
+                Visual Studio Code
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header fw-bold">
+                Linguagem de programação
+              </div>
+              <div class="card-body">
+                <img src="../../../images/logo_html5.svg" alt="Logo HTML5"
+                  style="max-width:50px;max-height:50px;" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="HTML 5">
+              </div>
+              <div class="card-footer">
+                HTML 5
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header fw-bold">
+                Linguagem de estilos
+              </div>
+              <div class="card-body">
+                <img src="../../../images/logo_css3.svg" alt="Logo CSS3"
+                  style="max-width:50px;max-height:50px;" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="CSS 3">
+              </div>
+              <div class="card-footer">
+                CSS 3
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header fw-bold">
+                Linguagem de programação
+              </div>
+              <div class="card-body">
+                <img src="../../../images/logo_js.svg" alt="Logo JavaScript"
+                  style="max-width:50px;max-height:50px;" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="JavaScript">
+              </div>
+              <div class="card-footer">
+                JavaScript
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header fw-bold">
+                Biblioteca de funções JS
+              </div>
+              <div class="card-body">
+                <img src="../../../images/logo_jquery.svg" alt="Logo JQuery"
+                  style="max-width:50px;max-height:50px;" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="Jquery">
+              </div>
+              <div class="card-footer">
+                JQuery
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-header fw-bold">
+                Framework CSS
+              </div>
+              <div class="card-body">
+                <img src="../../../images/logo_bootstrap.svg" alt="Logo Bootstrap"
+                  style="max-width:50px;max-height:50px;" data-bs-toggle="tooltip"
+                  data-bs-placement="top" title="Bootstrap">
+              </div>
+              <div class="card-footer">
+                Bootstrap
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <br>
+        
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          Por ser um projeto mais rápido, não foram criados os mockups das páginas em Figma.
+          Foi pensada a estrutura de páginas que deveria possuir o projeto e realizada a
+          organização das pastas e iniciada a programação. O site não possui rotas para
+          simplificar sua criação. E os cursos, experiências e projetos foram incluídos
+          diretamente na página.
+        </p>
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          Outra preocupação na criação deste projeto foi a responsividade que permite a
+          visualização em desktop e também mobile, realizando o ajuste e escondendo elementos
+          para melhorar a navegação.
+        </p>
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          O banner LGPD foi criado porém ainda não ativado pois faltam as funcionalidade como
+          enviar ao servidor a informação de quando um determinado dispositivo acessou e aceitou
+          os termos de uso e privacidade.
+        </p>
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          Para a próxima versão penso em aplicar React para tornar a página mais dinâmica
+          e utilizar outro framework CSS para permitir usar outras funcionalidades no site.
+        </p>
+        <p class="p-2" style="text-align: justify;text-justify: inter-word;">
+          Como o site está hospedado no servido do Firebase, nas próximas versões será implementado
+          uma API em GraphQL que leia informações como cursos e envie para a página. Desta forma será mais
+          fácil incluir cursos e atividades.
+        </p>
+
+        <hr>
+
+        <div style="color: grey; font-size: 0.9rem;">
+          Fontes:<br>
+          logotipos: https://logospng.org/;<br>
+          logotipos SVG: <a href="https://icon-icons.com/pt/users/QYVbFw10tinSxMN47fONm/icon-sets/"
+          target="_blank" rel="noopener noreferrer">Roberto Huertas at icon-icons.com</a>
+        </div>
+      </div>
+
+      <!-- Roda pé -->
+      <div class="MainFooter"></div>
+
+      <!-- Barra de aceitar cookies -->
+      <script src="../../../utils/lgpd.js"></script>
+
+    </div>
+  </body>
+</html>
