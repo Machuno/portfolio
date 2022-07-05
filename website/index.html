@@ -4,7 +4,6 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./styles/index.css" rel="stylesheet">
-    <link href="./styles/layout.css" rel="stylesheet">
     <!-- Incluir BootStrap-Icons -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -17,122 +16,181 @@
     <script>
       $(function () {
         $(".MainHeader").load("./pages/MainHeader/MainHeader.html");
-        $(".Sidebar").load("./pages/Sidebar/Sidebar.html");
         $(".MainFooter").load("./pages/MainFooter/MainFooter.html");
-        $(".Navbar").load("./pages/Navbar/Navbar.html");
       });
     </script>
   </head>
+
+  <style>
+    * {
+      margin: 0;
+    }
+    
+    #Layout {
+      /*
+      Layout
+      MH = MainHeader
+      CT = Content
+      MF = MainFooter
+      */
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 100px auto 75px;
+      grid-template-areas: 
+      'MH'
+      'CT'
+      'MF';
+
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .Content {
+      grid-area: CT;
+      overflow-x: auto;
+      background-color: #EDFCFD;
+      color:#EDFCFD;
+      padding: 0.5em;
+      background-image: url("../website/images/background_home.jpeg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size:cover;
+    }
+
+    .Content p {
+      padding: 0em;
+      width: 70%;
+      margin: 1rem 15%;
+    }
+
+    small {
+      padding: 0.4em;
+    }
+
+    .titulo {
+      background-color: lightgray;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .Content a {
+      text-decoration: none;
+      color: #EDFCFD;
+    }
+
+    .bi {
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    @media (max-width: 767px) {
+      .Content p {
+        width: 100%;
+        margin: 1rem 0;
+        
+      }
+    }
+  </style>
 
   <body>
     <div id="Layout">
       <!-- Cabeçalho -->
       <div class="MainHeader"></div>
-      <!-- Sidebar -->
-      <div class="Sidebar"></div>
-      <!-- Navbar - só apararece em mobile -->
-      <div class="Navbar"></div>
       <!-- Corpo -->
       <div class="Content">
         <div class="text">
           <p>Sou Luis Gustavo B. Machuno, interessado em tecnologia em diversas áreas.
-            Atualmente trabalho com proteção de sistemas elétricos de potência. Tenho 
-            grande interesse em programação de sistemas WEB, tanto front-end como back-end.
+            Atualmente trabalho com proteção de sistemas elétricos de potência, com
+            conhecimento para iniciar projetos de usinas fotovoltaicas. 
+          </p>
+          <p>
+            Tenho grande interesse em programação de sistemas WEB, tanto front-end como
+            back-end. Com conhecimento nesta área será possível desenvolver sistemas para
+            auxiliar na automatização de procesos dos serviços.
+          </p>
+          <p>
+            Motivado pela curiosidade, realizei diversos cursos para auxiliar na solução
+            de problemas do dia a dia de um engenheiro. E busco me atualizar para obter
+            o melhor resultado nos serviços entregues.
+          </p>
+          <p>
+            Como requisito de um bom resultados procurei realizar cursos em gestão de
+            projetos e gestão da qualidade (ISO9001).
+          </p>
+          <p>
+            Veja nos links a seguir meus conhecimentos adquiridos e atividades realizadas.
           </p>
         </div>
-        <div class="card mx-auto border-dark mb-3" style="max-width: 80%;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/grafeno.png" class="card-img-top" alt="...">
-              <small>Foto: <a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2022/02/mcti-disponibiliza-plano-de-ciencia-tecnologia-e-inovacao-de-materiais-avancados-para-consulta-publica" target="_blank"
-                rel="noopener noreferrer">MCTI</a> </small>
+
+        <div style="margin: 2em 25%">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3 text-center bg-transparent" >
+          
+            <!-- Cartão de atalho -->
+            <div class="col">
+              <div class="card bg-transparent border border-4 border-light">
+                <div class="card-body">
+                  <a href="https://machuno.info/pages/formacao"><i class="bi bi-mortarboard-fill"></i><br><p>Formação</p></a>
+                </div>
+              </div>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Mestre em Ciências</h5>
-                <p class="card-text">
-                  Mestrado em Ciências com ênfase em Materiais realizado na Universidade
-                  Federal do Triângulo Mineiro. Concluído em 2017 com a dissertação entitulada de
-                  "Funcionalização de multicamadas de grafeno com plasmas frios usando diferentes
-                  misturas gasosas", orientado pelo <a href="http://lattes.cnpq.br/6269182259456067"
-                  target="_blank" rel="noopener noreferrer">Dr. Rogério Valentim Gelamo</a> no 
-                  Laboratório de filmes finos e processos de plasma.
-                </p>
-                <a href="http://www.uftm.edu.br/stricto-sensu/ppgctm" target="_blank"
-                  rel="noopener noreferrer" class="btn btn-primary">
-                  Página do curso
-                </a>
-                <a href="./pages/atividades.html" class="btn btn-primary">Atividades</a>
+
+            <!-- Cartão de atalho -->
+            <div class="col">
+              <div class="card bg-transparent border border-4 border-light">
+                <div class="card-body">
+                  <a href="https://machuno.info/pages/experiencia.html"><i class="bi bi-briefcase-fill"></i><br><p>Experiência profissional</p></a>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Cartão de atalho -->
+            <div class="col">
+              <div class="card bg-transparent border border-4 border-light">
+                <div class="card-body">
+                  <a href="https://machuno.info/pages/cursos"><i class="bi bi-book"></i><br><p>Cursos</p></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cartão de atalho -->
+            <div class="col">
+              <div class="card bg-transparent border border-4 border-light">
+                <div class="card-body">
+                  <a href="https://machuno.info/pages/atividades.html"><i class="bi bi-pencil-square"></i><br><p>Atividades</p></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 text-center mt-3">
+          <!-- Cartão de atalho -->
+            <div class="col">
+              <div class="card bg-transparent border border-4 border-light">
+                <div class="card-body">
+                  <a href="https://machuno.info/pages/contato.html"><i class="bi bi-chat-text-fill"></i><br><p>Contato</p></a>
+                </div>
               </div>
             </div>
           </div>
+
+        </div>
+        
+        <br>
+
+        <div>
+          <!-- Créditos foto de fundo -->
+          Crédito fotografia:<br>
+          <a href="https://create.vista.com/pt/unlimited/stock-photos/243396518/stock-photo-starry-dark-sky-carpathian-mountains/">Foto Céu escuro estrelado em montanhas dos Cárpatos à noite no inverno criado por HayDmitriy</a>
         </div>
 
-        <div class="card mx-auto border-dark mb-3" style="max-width: 80%;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/transmissao.jpg" class="card-img-top" alt="...">
-              <small>Foto: <a href="https://www.revistamundoeletrico.com.br/transmissao/grupo-energisa-conclui-primeiro-trecho-de-lote-de-transmissao-no-para/" target="_blank"
-                rel="noopener noreferrer" >Revista Mundo Eletrico</a></small>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Engenheiro Eletricista</h5>
-                <p class="card-text">Curso de Engenharia Elétrica realizado na Universidade de Uberaba,
-                  concluído em Fevereiro de 2021. Foram realizados cursos complementares para adquirir
-                  conhecimento em proteção de sistema elétricos de potência em 13,8kV.</p>
-                  <a href="https://uniube.br/curso/ead/graduacao/engenharia-eletrica" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-primary">
-                    Página do curso
-                  </a>
-                  <a href="./pages/atividades.html" class="btn btn-primary">Atividades</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mx-auto border-dark mb-3" style="max-width: 80%;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/sistemas2.jpeg" class="card-img-top" alt="...">
-              <small>Foto: <a href="https://www.proeminente.com.br/blog/post/mundo/tecnologia-e-sistemas-de-informacao" target="_blank"
-                rel="noopener noreferrer">Proeminente.com.br</a></small>
-              
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Tecnólogo em Sistemas de informação</h5>
-                <p class="card-text">Curso realizado na Faculdades Integradas de Bauru (FIB-Bauru),
-                  concluído em 2008.
-                </p>
-                <a href="./pages/atividades.html" class="btn btn-primary">Atividades</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mx-auto border-dark mb-3" style="max-width: 80%;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/eletronica.jpeg" class="card-img-top" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Técnico em Eletrônica</h5>
-                <p class="card-text">
-                  Curso realizado no Colégio Técnico Industrial "Isaac Portal Roldán" - Unesp Bauru.
-                  Neste curso foram realizadas diversas atividades e experimnetos com eletrônica analógica
-                  e digital com microcontroladores.
-                </p>
-                <a href="https://cti.feb.unesp.br/#!/cursos/eletronica/" target="_blank"
-                  rel="noopener noreferrer" class="btn btn-primary">
-                  Página do curso
-                </a>
-                <a href="./pages/atividades.html" class="btn btn-primary">Atividades</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Roda pé -->
