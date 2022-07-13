@@ -31,7 +31,6 @@
 
 .Navbar {
   grid-area: Navbar;
-  text-align: center;
   display: none;
 }
 
@@ -88,7 +87,7 @@ small {
   }
 
   .Navbar {
-    display: inline;
+    display: flex;
   }
 
 }
